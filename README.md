@@ -21,7 +21,7 @@ Daten müssen wie wie folgt vorliegen?
 ## Contributing
 **(Wer ist im Team Name + Matrikelnummer + Email)**
 
-- [Noah Rettenbacher - 52110065](@mci4me.at)
+- [Noah Rettenbacher - 52110065](rn6959@mci4me.at)
 - [Johannes Eigner - 52111920](ej4427@mci4me.at)
 
 ## License
