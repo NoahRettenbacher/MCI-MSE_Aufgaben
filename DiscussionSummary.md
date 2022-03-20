@@ -14,11 +14,11 @@ Die Software ist auf jedes Fitnesslevel der Probanden anwendbar und dient zur ü
 ## Perspectives
 ### Who will use the system?
 
-Sowohl für Rehabilitations als auch Trainingszwecke.
+Kann von Diagnostikern Therapeuten oder Ärzten sowohl für Rehabilitations- als auch Trainingszwecke verwendet werden.
 
 ### Who can provide input about the system?
 
-Personen die mit der Auswertung der dargestellten Daten arbeiten oder diese auswerten.
+Personen die mit der Auswertung der dargestellten Daten arbeiten oder mit der Auswertung beschäftigt sind. Erfahrungen während der Nutzung können zur verbesserung der Software beitragen. 
 
 
 ## Project Objectives
