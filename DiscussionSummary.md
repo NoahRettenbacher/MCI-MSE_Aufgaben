@@ -14,7 +14,7 @@ Die Software ist auf jedes Fitnesslevel der Probanden anwendbar und dient zur ü
 ## Perspectives
 ### Who will use the system?
 
-Kann von Diagnostikern Therapeuten oder Ärzten sowohl für Rehabilitations- als auch Trainingszwecke verwendet werden.
+Kann von Diagnostikern Therapeuten oder Ärzten sowohl für Rehabilitations- als auch Trainingszwecke für ihre Patienten verwendet werden.
 
 ### Who can provide input about the system?
 
@@ -24,7 +24,7 @@ Personen die mit der Auswertung der dargestellten Daten arbeiten oder mit der Au
 ## Project Objectives
 ### Known business rules
 
-...
+t.b.t
 
 ### System information and/or diagrams
 
@@ -35,11 +35,11 @@ Aus diesem muss die Herzrate bestimmt werden.
 
 ### Assumptions and dependencies
 
-...
+Ein auf den Patienten angepasster Schwierigkeitsgrad muss verwendet werden, um die Funktion des Tests zu gewährleisten. Eine richtige Anwendung der Messinstrumente ist erforderlich.
 
 ### Design and implementation constraints
 
-...
+Ein einfach zu bedienendes Benutzer-Interface.
 
 ## Risks
 
