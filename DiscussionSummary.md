@@ -9,7 +9,7 @@ Eine Software zur überprüfung und Darstellung Patienabhängiger Leistungsdaten
 Die Software ist auf jedes Fitnesslevel der Probanden anwendbar und dient zur überprüfung der Vitalparameter unter Anstrengung. Die Vitalparameter werden mit passenden Messgeräten aufgezeichnet. Die Schwierigkeitsstufe wird dabei auf den jeweiligen Probanden individuell eingestellt.
 ### Other background information
 
-...
+Das System soll eine korrekte Datenverarbeitung gewährleisten.
 
 ## Perspectives
 ### Who will use the system?
