@@ -2,11 +2,11 @@
 
 ### Purpose of project
 
-Eine Software zur überprüfung und Darstellung Patienabhängiger Leistungsdaten. Die Analyse wird anhand eines Leistungstests am Ergometer durchgeführt. 
+Eine Software zur Überprüfung und Darstellung Patienabhängiger Leistungsdaten. Die Analyse wird anhand eines Leistungstests am Ergometer durchgeführt. 
 
 ### Scope of project
 
-Die Software ist auf jedes Fitnesslevel der Probanden anwendbar und dient zur überprüfung der Vitalparameter unter Anstrengung. Die Vitalparameter werden mit passenden Messgeräten aufgezeichnet. Die Schwierigkeitsstufe wird dabei auf den jeweiligen Probanden individuell eingestellt.
+Die Software ist auf jedes Fitnesslevel der Probanden anwendbar und dient zur Überprüfung der Vitalparameter unter Anstrengung. Die Vitalparameter werden mit passenden Messgeräten aufgezeichnet. Die Schwierigkeitsstufe wird dabei auf den jeweiligen Probanden individuell eingestellt.
 ### Other background information
 
 Das System soll eine korrekte Datenverarbeitung gewährleisten.
@@ -14,17 +14,17 @@ Das System soll eine korrekte Datenverarbeitung gewährleisten.
 ## Perspectives
 ### Who will use the system?
 
-Kann von Diagnostikern Therapeuten oder Ärzten sowohl für Rehabilitations- als auch Trainingszwecke für ihre Patienten verwendet werden.
+Das System kann von Diagnostikern, Therapeuten oder Ärzten sowohl für Rehabilitations- als auch für Trainingszwecke für ihre Patienten verwendet werden.
 
 ### Who can provide input about the system?
 
-Personen die mit der Auswertung der dargestellten Daten arbeiten oder mit der Auswertung beschäftigt sind. Erfahrungen während der Nutzung können zur verbesserung der Software beitragen. 
+Personen, die mit der Auswertung der dargestellten Daten arbeiten oder mit der Auswertung beschäftigt sind. Erfahrungen während der Nutzung können zur Verbesserung der Software beitragen. 
 
 
 ## Project Objectives
 ### Known business rules
 
-t.b.t
+t.b.d
 
 ### System information and/or diagrams
 
@@ -36,7 +36,7 @@ Aus diesem muss die Herzrate bestimmt werden.
 
 ### Assumptions and dependencies
 
-Ein auf den Patienten angepasster Schwierigkeitsgrad muss verwendet werden, um die Funktion des Tests zu gewährleisten. Eine richtige Anwendung der Messinstrumente ist erforderlich.
+Ein auf den Patienten angepasster Schwierigkeitsgrad muss verwendet werden, um die Durchführbarkeit der Tests zu gewährleisten. Eine richtige Anwendung der Messinstrumente ist erforderlich.
 
 ### Design and implementation constraints
 
@@ -44,7 +44,7 @@ Ein einfach zu bedienendes Benutzer-Interface.
 
 ## Risks
 
-Bei nicht korrekt angepasstem Schwierigkeitsgrades kann es zu einer Überanstrengung des Patienten führen 
+Bei nicht korrekt angepasstem Schwierigkeitsgrad kann es zu einer Überanstrengung des Patienten führen.
 
 ## Known future enhancements
 
