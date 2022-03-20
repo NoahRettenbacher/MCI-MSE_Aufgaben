@@ -29,6 +29,7 @@ t.b.t
 ### System information and/or diagrams
 
 Beispiel von aufgezeichneten EKG Daten
+
 ![](ekg_example.png)
 
 Aus diesem muss die Herzrate bestimmt werden.
@@ -43,11 +44,11 @@ Ein einfach zu bedienendes Benutzer-Interface.
 
 ## Risks
 
-...
+Bei nicht korrekt angepasstem Schwierigkeitsgrades kann es zu einer Überanstrengung des Patienten führen 
 
 ## Known future enhancements
 
-...
+t.b.d
 
 ## References
 
