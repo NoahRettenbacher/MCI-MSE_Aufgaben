@@ -18,7 +18,7 @@ Sowohl für Rehabilitations als auch Trainingszwecke.
 
 ### Who can provide input about the system?
 
-...
+Personen die mit der Auswertung der dargestellten Daten arbeiten oder diese auswerten.
 
 
 ## Project Objectives
