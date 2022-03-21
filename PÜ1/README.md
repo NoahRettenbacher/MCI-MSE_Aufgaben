@@ -1,7 +1,6 @@
 # Leistungsdiagnostik
-**(kurze Beschreibung des Ziels)**
 
-Werkzeug zur Vereinfachung und Automatisierung von Leistungstests, basierend auf EKG-Daten und Leistungswerten und Patient:innen-Daten
+Werkzeug zur Vereinfachung und Automatisierung von Leistungstests, basierend auf EKG-Daten und Leistungswerten und Patient:innen-Daten. Die entsprechenden Daten werden von einem funktionierenden Ergometer aufgezeichnet, von der Software verarbeitet und zur Diagnosezwecke grafisch ausgegeben. Diagnostiker können somit die Daten von Probanden schnell interpretieren.
 
 ## Installation
 
@@ -21,7 +20,7 @@ Daten müssen wie wie folgt vorliegen?
 ## Contributing
 **(Wer ist im Team Name + Matrikelnummer + Email)**
 
-- [Noah Rettenbacher - 52110065](@mci4me.at)
+- [Noah Rettenbacher - 52110065](rn6959@mci4me.at)
 - [Johannes Eigner - 52111920](ej4427@mci4me.at)
 
 ## License
