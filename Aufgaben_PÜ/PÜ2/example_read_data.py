@@ -10,7 +10,7 @@ def Leistungsdaten():
         x = np.array(power_data_watts)
         
         print(file_name)
-        plt.title("Line graph " + str(i))
+        plt.title("Line graph " + str(i)) #nummerierung der Plots
         plt.plot(x, color="red")
 
         plt.show()

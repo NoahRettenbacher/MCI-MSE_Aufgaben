@@ -36,7 +36,10 @@ Aus diesem muss die Herzrate bestimmt werden.
 
 ### Assumptions and dependencies
 
-Ein auf den Patienten angepasster Schwierigkeitsgrad muss verwendet werden, um die Durchführbarkeit der Tests zu gewährleisten. Eine richtige Anwendung der Messinstrumente ist erforderlich.
+Ein auf den Patienten angepasster Schwierigkeitsgrad muss verwendet werden, um die Durchführbarkeit der Tests zu gewährleisten. Eine richtige Anwendung der Messinstrumente ist erforderlich. 
+
+Analyse der Daten:
+Zum einen werden Daten wie, Name, Geburtsjahr, das Leistungslevel in Watt und die Testdauer in Sekunden von der Testperson aufgenommen. Der Test dauert bei jeder Person 180 Sekunden. Sekündlich werden die getretenen Watt am Fahrradergometer gemessen und Visuell in einem Graph dargestellt. Die csv Datei beinhaltet zwei Spalten mit Daten. Wobei die EKG-Daten in millisekunden aufgelöst sind. Dabei ist in der ersten Spalte der Zeitstempel (in 180 Sekunden werden 180 000 Messpunkte erfasst)
 
 ### Design and implementation constraints
 
