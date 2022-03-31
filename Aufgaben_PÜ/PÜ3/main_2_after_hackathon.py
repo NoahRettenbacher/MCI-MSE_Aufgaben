@@ -1,7 +1,9 @@
-# UC 2.0
+# UC 2.0 
+#methoden mit docstrings versehen --> daraus soll objekt erstellt werden
 
 #%% UC 2.1 Einlesen der Daten
-
+# Musterlösung 
+#Funktion für einlesen der Daten 
 
 list_of_new_tests = []
 ## Überprüfen ob Dateien vorhanden sind
@@ -27,7 +29,10 @@ new_ecg_data["Subject_3"].plot()
 
 #%% UC 2.2 Vorverarbeiten der Daten
 
-## Anlegen einer Zeitreihe der Herzfrequenz aus den EKG-Daten
+## Anlegen einer Zeitreihe der Herzfrequenz aus den EKG-Daten 
+
+#TESTMETHODEn find peaks () findminimum ()--> oop Testklasse erstellen plot in testklasse
+
 
 import neurokit2 as nk
 
@@ -84,7 +89,7 @@ print("Year of birth:  " + str(subject_data["birth_year"]))
 print("Test level power in W:  " + str(subject_data["test_power_w"]))
 print(" \n")
 print("Maximum HR was: " + str(maximum_hr))
-print("Was test terminated because exceeding HR " + str(termination))
+print("Was test terminated because exceeding HR " + str(termination)) #Printsummary Proband als Subjekt pro person daten ausgegeben
 
 ## Ausgabe einer Zusammenfassung
 
@@ -96,7 +101,7 @@ print("Was test terminated because exceeding HR " + str(termination))
 folder_input_data = os.path.join(folder_current, 'input_data')
 file_name =  os.path.join(folder_input_data, 'power_data_3.txt')
 power_data_watts = open(file_name).read().split("\n")
-power_data_watts.pop(-1)
+power_data_watts.pop(-1) # Funktion method()
 len(power_data_watts)
 
 
