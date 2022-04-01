@@ -18,6 +18,9 @@ def Leistungsdaten():
 # %% Erstellen des Plots
 Leistungsdaten()
     
+# Bewertung: Gute Lösung. Nächstes mal die For-Schleife um die Leisutngsdaten herum schreiben. siehe unten:
+# for i in range(1,4):
+#    Leistungsdaten(i)
 
 # %%
 
