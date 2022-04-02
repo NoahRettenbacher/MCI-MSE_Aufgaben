@@ -5,6 +5,8 @@ import os
 import pandas as pd
 import neurokit2 as nk 
 import json
+
+
 #%% UC 2.1 Einlesen der Daten
 
 ## Überprüfen ob Dateien vorhanden sind
@@ -14,9 +16,13 @@ import json
 
 list_of_new_tests = []
     list_of_new_tests.append(new_ecg_data)
+
+
 #%% UC 2.2 Vorverarbeiten der Daten
 
 ## Anlegen einer Zeitreihe der Herzfrequenz aus den EKG-Daten
+
+
 
 #%% UC 2.3 Analysieren der Daten auf Abbruch-Kriterium
 if maximum_hr > subject_max_hr*0.90:
@@ -25,17 +31,27 @@ if maximum_hr > subject_max_hr*0.90:
         else termination = False  #else von N hinzugefügt
 ## Vergleich der Maximalen Herzfrequenz mit Alter des Patienten
 
+
+
 #%% UC 2.4 Erstellen einer Zusammenfassung
 
 ## Ausgabe einer Zusammenfassung
+
+
 
 #%% UC 2.5 Visualisierung der Daten
 
 ## Erstellung eines Plots
 
+
+
+
 #%% UC 2.6 Manuelle Eingabe eines Abbruchkritierums
 
 ## Abfrage an Nutzer:in, ob Abgebrochen werden soll
+
+
+
 
 #%% UC 2.7 Speichern der Daten
 
