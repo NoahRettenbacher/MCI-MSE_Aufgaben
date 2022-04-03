@@ -3,10 +3,6 @@
 #%% UC 2.1 Einlesen der Daten
 
 
-
-
-
-
 import os
 import pandas as pd
 
