@@ -14,13 +14,6 @@
 # J Funktion erstellen: Eingabe = folder_input_data; Ausgabe = list_of_new_tests
 # Funktion überprüft, ob im übergegebenen Ordner Dateien enthalten sind und
 # gibt eine Liste mit den Filenamen zurück
-def add(folder_input_data):
-    """Überprüft, ob im Datenordner Daten vorhanden sind und gibt eine Liste mit den zu verarbeitenden Daten zurück."""
-    
-    
-    
-    
-    return list_of_new_tests
 
 
 list_of_new_tests = []
@@ -48,7 +41,7 @@ for file in os.listdir(folder_input_data):
 
 new_ecg_data["Subject_3"].plot()
 
-list_of_new_tests[0][1].plot()
+#list_of_new_tests[0][1].plot()
 
 
 
