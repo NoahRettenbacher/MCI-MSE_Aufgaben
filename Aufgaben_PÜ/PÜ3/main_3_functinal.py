@@ -97,7 +97,7 @@ maximum_hr, subject_max_hr, termination = abbruch_check(subject_data)
 
 #%% UC 2.4 Erstellen einer Zusammenfassung
 
-def print_zusammenfassung(subject_data,maximum_hr,termination):
+def print_zusammenfassung():
     """Funktion, die eine Zusammenfassung erstellt"""
     print("Summary for Subject " + str(subject_data["subject_id"]))
     print("Year of birth:  " + str(subject_data["birth_year"]))
@@ -106,15 +106,23 @@ def print_zusammenfassung(subject_data,maximum_hr,termination):
     print("Maximum HR was: " + str(maximum_hr))
     print("Was test terminated because exceeding HR " + str(termination)) # Printsummary Proband als Subjekt pro person daten ausgegeben
 
-print_zusammenfassung(subject_data,maximum_hr,termination)
+print_zusammenfassung()
+# Funktionsaufruf und  Ausgabe einer Zusammenfassung
 
-## Ausgabe einer Zusammenfassung
 
 
 #%% UC 2.5 Visualisierung der Daten
-
 ## Erstellung eines Plots
+def plot_erstellen():
+    """Plot der Ergebnisse wird erstellt."""
+    peaks_downsampled = peaks[peaks.index % 1000 == 0]  
+    peaks_downsampled = peaks_downsampled.reset_index(drop=True)
+    peaks_downsampled = peaks_downsampled.drop(["ECG_R_Peaks"],axis=1)
+    peaks_downsampled["Power (Watt)"] = pd.to_numeric(power_data_watts)
+    peaks_downsampled.plot()
 
+# Funktionsaufruf
+plot_erstellen()
 
 
 
@@ -145,3 +153,4 @@ results_file = os.path.join(folder_input_data, 'data.json')
 
 with open(results_file, 'w', encoding='utf-8') as f:
     json.dump(json_data_to_save, f, ensure_ascii=False, indent=4)
+# %%
