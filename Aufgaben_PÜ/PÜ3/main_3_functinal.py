@@ -1,15 +1,9 @@
 # UC 2.0
-
 #%% UC 2.1 Einlesen der Daten
-
 
 import os
 import pandas as pd
 
-folder_current = os.path.dirname(__file__) 
-folder_input_data = os.path.join(folder_current, 'input_data')
-
-# Funktion einlesen wird erstellt
 def einlesen(folder_input_data):
     """Überprüft, ob im Datenordner Daten vorhanden sind und gibt eine Liste mit den zu verarbeitenden Daten zurück."""
     list_of_new_tests = []
@@ -25,12 +19,15 @@ def einlesen(folder_input_data):
     
     return list_of_new_tests
 
+folder_current = os.path.dirname(__file__) 
+folder_input_data = os.path.join(folder_current, 'input_data')
+
 list_of_new_tests = einlesen(folder_input_data)
 
 
 #new_ecg_data["Subject_3"].plot()
 
-#list_of_new_tests[0][1].plot()
+list_of_new_tests[0].plot()
 
 
 
