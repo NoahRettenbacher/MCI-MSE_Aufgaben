@@ -1,12 +1,5 @@
 # UC 2.0
 
-#Import der nötigen Packete
-import os
-import pandas as pd
-import neurokit2 as nk 
-import json
-
-
 #%% UC 2.1 Einlesen der Daten
 
 ## Überprüfen ob Dateien vorhanden sind
@@ -14,8 +7,7 @@ import json
 
 ## Erstellen einer Liste von Tests, die zu verarbeiten sind
 
-list_of_new_tests = []
-    list_of_new_tests.append(new_ecg_data)
+
 
 
 #%% UC 2.2 Vorverarbeiten der Daten
@@ -25,10 +17,7 @@ list_of_new_tests = []
 
 
 #%% UC 2.3 Analysieren der Daten auf Abbruch-Kriterium
-if maximum_hr > subject_max_hr*0.90:
-    termination = True
-    
-        else termination = False  #else von N hinzugefügt
+
 ## Vergleich der Maximalen Herzfrequenz mit Alter des Patienten
 
 
