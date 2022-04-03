@@ -2,10 +2,39 @@
 
 #%% UC 2.1 Einlesen der Daten
 
-## Überprüfen ob Dateien vorhanden sind
+# Funktion einlesen wird erstellt
+def einlesen(folder_input_data):
+    """Überprüft, ob im Datenordner Daten vorhanden sind und gibt eine Liste mit den zu verarbeitenden Daten zurück."""
+    list_of_new_tests = []
+    
+    for file in os.listdir(folder_input_data):
+    
+        if file.endswith(".csv"):
+            file_name = os.path.join(folder_input_data, file)
+            #subject_id = file_name.split(".")[0][-1]
+            new_ecg_data= pd.read_csv(file_name)
+            ## Erstellen einer Liste von Tests, die zu verarbeiten sind
+            list_of_new_tests.append(new_ecg_data)
+    
+    return list_of_new_tests
 
 
-## Erstellen einer Liste von Tests, die zu verarbeiten sind
+
+
+import os
+import pandas as pd
+
+folder_current = os.path.dirname(__file__) 
+folder_input_data = os.path.join(folder_current, 'input_data')
+
+
+list_of_new_tests = einlesen(folder_input_data)
+
+
+#new_ecg_data["Subject_3"].plot()
+
+list_of_new_tests[0][1].plot()
+
 
 
 
