@@ -170,23 +170,16 @@ len(power_data_watts)
 # %%
 ## Erstellung eines Plots
 
-
-#peaks['average_HR_10s'].plot()
-
-peaks_downsampled = peaks[peaks.index % 1000 == 0]  
-
-peaks_downsampled = peaks_downsampled.reset_index(drop=True)
-peaks_downsampled = peaks_downsampled.drop(["ECG_R_Peaks"],axis=1)
-peaks_downsampled
-
-
-peaks_downsampled["Power (Watt)"] = pd.to_numeric(power_data_watts)
-#peaks_downsampled["Power (Watt)"] = peaks_downsampled["Power (Watt)"]
-peaks_downsampled.plot()
-
-#peaks_downsampled["Power (Watt)"].plot()
+def plot_erstellen():
+    """Plot der Ergebnisse wird erstellt."""
+    peaks_downsampled = peaks[peaks.index % 1000 == 0]  
+    peaks_downsampled = peaks_downsampled.reset_index(drop=True)
+    peaks_downsampled = peaks_downsampled.drop(["ECG_R_Peaks"],axis=1)
+    peaks_downsampled["Power (Watt)"] = pd.to_numeric(power_data_watts)
+    peaks_downsampled.plot()
 
 
+plot_erstellen()
 
 
 
