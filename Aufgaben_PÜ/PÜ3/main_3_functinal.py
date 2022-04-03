@@ -97,8 +97,18 @@ maximum_hr, subject_max_hr, termination = abbruch_check(subject_data)
 
 #%% UC 2.4 Erstellen einer Zusammenfassung
 
-## Ausgabe einer Zusammenfassung
+def print_zusammenfassung(subject_data,maximum_hr,termination):
+    """Funktion, die eine Zusammenfassung erstellt"""
+    print("Summary for Subject " + str(subject_data["subject_id"]))
+    print("Year of birth:  " + str(subject_data["birth_year"]))
+    print("Test level power in W:  " + str(subject_data["test_power_w"]))
+    print(" \n")
+    print("Maximum HR was: " + str(maximum_hr))
+    print("Was test terminated because exceeding HR " + str(termination)) # Printsummary Proband als Subjekt pro person daten ausgegeben
 
+print_zusammenfassung(subject_data,maximum_hr,termination)
+
+## Ausgabe einer Zusammenfassung
 
 
 #%% UC 2.5 Visualisierung der Daten
