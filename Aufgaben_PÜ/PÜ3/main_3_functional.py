@@ -5,6 +5,7 @@ import os
 import pandas as pd
 import neurokit2 as nk
 import json
+import matplotlib.pyplot as plt
 #%% UC 2.1 Einlesen der Daten
 
 def einlesen(folder_input_data):
@@ -30,6 +31,8 @@ folder_input_data = os.path.join(folder_current, 'input_data')
 list_of_new_tests = einlesen(folder_input_data)
 new_ecg_data = list_of_new_tests[2]
 ecg_data_3 = new_ecg_data["Subject_3"]
+list_of_new_tests[2]["Subject_3"].plot
+plt.show()
 
 
 
