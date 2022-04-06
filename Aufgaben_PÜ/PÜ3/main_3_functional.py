@@ -157,3 +157,6 @@ results_file = os.path.join(folder_input_data, 'data.json')
 with open(results_file, 'w', encoding='utf-8') as f:
     json.dump(json_data_to_save, f, ensure_ascii=False, indent=4)
 # %%
+
+# Bewertung: Gute Arbeit! Ihr habt das Prinzip verstanden. Docstings sollten allerding mehr Informationen enthalten als nur eine Textbeschreibung. Bitte selbst
+# einen Docstring von ferigen Methoden ansehen, dann versteht ihr, dass noch weitere Input Parameter oder Return Values beschrieben werden.
