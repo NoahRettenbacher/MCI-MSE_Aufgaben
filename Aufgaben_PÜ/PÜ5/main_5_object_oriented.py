@@ -67,6 +67,7 @@ class Test:
     - manual_termination: bool
     - terminated: bool
     - maximum_hr: int
+    - average_hr_test: int
     - variance_hr_test: int
     - duration_test_min: int
     - number_of_heartbeats: int
@@ -137,6 +138,8 @@ class Test:
         print("Summary for Subject " + str(self.subject.subject_id))
         print("Year of birth:  " + str(self.subject.birth_year))
         print("Test level power in W:  " + str(self.subject.test_power_w))
+        print("Maximum HR was: " + str(self.maximum_hr))
+        print("Average HR was: " + str(self.average_hr_test))
         print("Variance HR was: " + str(self.variance_hr))
         print("Was test terminated because exceeding HR: " + str(self.terminated))
         print("Was test terminated because for other reasons: " + str(self.manual_termination))
