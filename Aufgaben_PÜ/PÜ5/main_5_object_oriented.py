@@ -108,6 +108,8 @@ class Test:
         
         self.maximum_hr = self.hr_peaks['average_HR_10s'].max()
 
+        self.variance_hr_test = self.hr_peaks["ECG_R_Peaks"].var()
+
         #self.peaks['average_HR_10s'].plot()
 
     def evaluate_termination(self):
@@ -140,7 +142,7 @@ class Test:
         print("Test level power in W:  " + str(self.subject.test_power_w))
         print("Maximum HR was: " + str(self.maximum_hr))
         print("Average HR was: " + str(self.average_hr_test))
-        print("Variance HR was: " + str(self.variance_hr))
+        print("Variance HR was: " + str(self.variance_hr_test))
         print("Was test terminated because exceeding HR: " + str(self.terminated))
         print("Was test terminated because for other reasons: " + str(self.manual_termination))
 
@@ -236,3 +238,5 @@ for test in list_of_new_tests:                      # Alle Tests werden nacheina
 
     iterator = iterator + 1
 
+
+# %%
