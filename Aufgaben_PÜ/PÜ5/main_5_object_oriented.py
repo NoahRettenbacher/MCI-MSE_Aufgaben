@@ -4,6 +4,18 @@
 import pandas as pd
 import neurokit2 as nk
 import json
+import logging as log
+
+#%%
+# Log File
+logger = log.getLogger('log_file')
+
+log.basicConfig(filename='logfile.log', level=log.INFO, format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+#1 Information
+#2 Time
+
+
+
 
 # %%
 # Definition of Classes
@@ -160,8 +172,12 @@ class Test:
         self.manual_termination = False
         self.manual_termination = input("Is this test invalid? (leave blank if valid): ")
 
-        if self.manual_termination != False:
+        if self.manual_termination != '': # wenn manueller abbruch freigelassen dann ist der Test gültig
             self.termination = True
+            log.info('Test with subject-id: %s was invalid', self.subject_id) #log für manuellen Abbruch
+
+
+        
         
 
     def create_plot(self):
@@ -241,6 +257,12 @@ for test in list_of_new_tests:                      # Alle Tests werden nacheina
     test.save_data()
 
     iterator = iterator + 1
+
+    log.info('Data of Subject-id: %s has been loaded', str(iterator))      
+    
+
+
+
 
 
 # %%
