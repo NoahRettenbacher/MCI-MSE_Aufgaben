@@ -144,7 +144,7 @@ class Test:
         print("Average HR was: " + str(self.average_hr_test))
         print("Variance HR was: " + str(self.variance_hr_test))
         print("Was test terminated because exceeding HR: " + str(self.terminated))
-        print("Was test terminated because for other reasons: " + str(self.manual_termination))
+        print("was  test terminated because for other reasons: " + str(self.manual_termination))
 
         print("________________")
         print(" \n")
