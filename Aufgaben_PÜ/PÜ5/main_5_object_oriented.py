@@ -108,7 +108,11 @@ class Test:
         
         self.maximum_hr = self.hr_peaks['average_HR_10s'].max()
 
-        self.variance_hr_test = self.hr_peaks["ECG_R_Peaks"]
+        #self.variance_hr = self.hr_peaks["average_HR_10s"].var()
+
+        ## Calculate heart rate variance
+        self.hrv_time = nk.hrv_time(self.hr_peaks, sampling_rate=1000)
+        self.variance_hr = self.hrv_time['HRV_MeanNN'].values[0]
 
         #self.peaks['average_HR_10s'].plot()
 
@@ -142,7 +146,7 @@ class Test:
         print("Test level power in W:  " + str(self.subject.test_power_w))
         print("Maximum HR was: " + str(self.maximum_hr))
         print("Average HR was: " + str(self.average_hr_test))
-        #print("Variance HR was: " + str(self.variance_hr_test))
+        print("Variance HR was: " + str(self.variance_hr))
         print("Was test terminated because exceeding HR: " + str(self.terminated))
         print("Was test terminated because for other reasons: " + str(self.manual_termination))
 
