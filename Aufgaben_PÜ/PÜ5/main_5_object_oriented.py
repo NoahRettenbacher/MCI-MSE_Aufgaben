@@ -5,6 +5,7 @@ import pandas as pd
 import neurokit2 as nk
 import json
 import logging as log
+import matplotlib.pyplot as plt
 
 #%%
 # Log File
@@ -187,9 +188,29 @@ class Test:
         self.plot_data = pd.DataFrame()
         self.plot_data["Heart Rate"] = self.hr_peaks[self.ecg_data.index % 1000 == 0]["average_HR_10s"]  
         self.plot_data = self.plot_data.reset_index(drop=True)
-
         self.plot_data["Power (Watt)"] = pd.to_numeric(self.power_data.power_data_watts)
         self.plot_data.plot()
+
+    def create_nice_plot(self):
+
+        """
+        Create a lovley plot that looks awesome.
+        """      
+        hr = self.hr_peaks[self.ecg_data.index % 1000 == 0]["average_HR_10s"]
+        hr = hr.reset_index(drop=True)
+        watts = pd.to_numeric(self.power_data.power_data_watts)
+        ax1 = plt.subplot(211)
+        ax1.plot(hr,color='red')
+        plt.grid(True)
+        plt.title("Performance Test")
+        plt.ylabel("Heart Rate [bpm]")
+        ax2 = plt.subplot(212)
+        ax2.plot(watts,color='green')
+        plt.xlabel("time [s]")
+        plt.ylabel("Power [watts]")
+        plt.grid(True)      
+        plt.savefig('Evaluation Subject {}'.format(self.subject_id))
+
     
 
     def save_data(self):
@@ -197,6 +218,29 @@ class Test:
         Store the test data in a JSON file
         """
         __data = {"User ID": self.subject_id, "Reason for test termation": self.manual_termination, "Average Heart Rate": self.average_hr_test, "Maximum Heart Rate": self.maximum_hr, "Test Length (s)": self.power_data.duration_s, "Test Power (W)": self.subject.test_power_w}
+
+        __folder_current = os.path.dirname(__file__)
+        __folder_input_data = os.path.join(__folder_current, 'result_data')
+        
+        __file_name = 'result_data_subject' + str(self.subject_id) +'.json'
+        __results_file = os.path.join(__folder_input_data, __file_name)
+
+        with open(__results_file, 'w', encoding='utf-8') as f:
+            json.dump(__data, f, ensure_ascii=False, indent=4)
+
+    def save_data_baum(self):
+        """
+        Store the test data in a JSON File with a tree structure
+        """
+        __data = {"User ID": self.subject_id,
+            Test: {
+                "Reason for test termation": self.manual_termination,
+                "Average Heart Rate": self.average_hr_test,
+                "Maximum Heart Rate": self.maximum_hr,
+                "Test Length (s)": self.power_data.duration_s,
+                "Test Power (W)": self.subject.test_power_w
+                }
+        }
 
         __folder_current = os.path.dirname(__file__) 
         __folder_input_data = os.path.join(__folder_current, 'result_data')
@@ -206,6 +250,7 @@ class Test:
 
         with open(__results_file, 'w', encoding='utf-8') as f:
             json.dump(__data, f, ensure_ascii=False, indent=4)
+
 
 
 
@@ -255,6 +300,8 @@ for test in list_of_new_tests:                      # Alle Tests werden nacheina
     test.create_summary()
     test.ask_for_termination()
     test.save_data()
+    test.create_nice_plot()
+   # test.save_data_baum()
 
     iterator = iterator + 1
 
