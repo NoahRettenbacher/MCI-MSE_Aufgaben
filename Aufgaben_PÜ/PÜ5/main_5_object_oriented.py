@@ -124,8 +124,9 @@ class Test:
         #self.variance_hr = self.hr_peaks["average_HR_10s"].var()
 
         ## Calculate heart rate variance
-        self.hrv_time = nk.hrv_time(self.hr_peaks, sampling_rate=1000)
-        self.variance_hr = self.hrv_time['HRV_MeanNN'].values[0]
+        self.variance_hr = self.hr_peaks["ECG_R_Peaks"].var()*60*1000
+        #self.hrv_time = nk.hrv_time(self.hr_peaks, sampling_rate=1000)
+        #self.variance_hr = self.hrv_time['HRV_MeanNN'].values[0]
 
         #self.peaks['average_HR_10s'].plot()
 
@@ -232,13 +233,15 @@ class Test:
         """
         Store the test data in a JSON File with a tree structure
         """
-        __data = {"User ID": self.subject_id,
+        __data = {
             Test: {
+                "User ID": self.subject_id,
                 "Reason for test termation": self.manual_termination,
                 "Average Heart Rate": self.average_hr_test,
                 "Maximum Heart Rate": self.maximum_hr,
+                "Variance Heart Rate": self.variance_hr,
                 "Test Length (s)": self.power_data.duration_s,
-                "Test Power (W)": self.subject.test_power_w
+                "Test Power (W)": self.subject.test_power_w,
                 }
         }
 
