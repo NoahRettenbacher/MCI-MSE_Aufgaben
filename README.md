@@ -6,4 +6,4 @@
 | Punkte bisher | 1    | 2    | 2,25 | 3,4  | 0 | 2,85 | 2,85 | 3    | 2   | 3,5 | 2   | 2,55| 2   | 3   | 3   | 0   |
 
 max. Punktzahl: 40
-erreichte Punktzahl: 35,4 -> ~89%
+erreichte Punktzahl: 35,4 -> ~88%
